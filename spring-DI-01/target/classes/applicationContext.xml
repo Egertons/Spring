@@ -58,4 +58,5 @@
         <property name="address" value="JiLin"></property>
     </bean>
     <import resource="userbeans.xml"/>
+    <import resource="jojo_beans.xml"/>
 </beans>
