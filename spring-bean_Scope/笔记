@@ -1,0 +1,15 @@
+Bean的作用域
+    我们可以在创建Bean的时候指定这个Bean的合法作用域（也就是能够使用的空间）
+    一共有以下几种：
+        singleton(单例)---Spring的默认Bean创建机制
+            全局唯一（可以理解为单例模式），无论调用多少次均指向同一对象。
+            如果没有特殊配置的话，默认均为单例。
+            Eg:
+                <bean id="stu" class="com.zhanglin.Student" scope="singleton"/>
+        prototype(原型)
+            若配置为原型模式，则每调用一次，就新创建一个对象。
+        以下四种为web-mvc项目专属作用域
+        request(请求)
+        session
+        application(全局)
+        websocket

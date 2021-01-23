@@ -11,6 +11,7 @@
     <modules>
         <module>spring-ioc-01</module>
         <module>spring-DI-01</module>
+        <module>spring-bean_Scope</module>
     </modules>
 
     <dependencies>
