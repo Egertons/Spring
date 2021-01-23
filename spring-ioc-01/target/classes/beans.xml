@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="mybatis" class="com.zhanglin.dao.MyBatis"></bean>
+    <bean id="sql" class="com.zhanglin.dao.SQLServer"></bean>
+    <bean id="userServer" class="com.zhanglin.server.UserServer">
+        <!-- 第一种通过有参构造用XML配置对象 -->
+<!--        <constructor-arg index="0" ref="sql"/>-->
+        <!-- 第二种方式通过type来配置对象（不推荐） -->
+<!--        <constructor-arg type="com.zhanglin.dao.UserDao" ref="sql"/>-->
+        <!-- 第三种方式：直接通过参数名配置 -->
+        <constructor-arg name="userDao" ref="sql"/>
+        <!-- 标准通过set注入方式 -->
+<!--        <property name="userDao" ref="sql"/>-->
+    </bean>
+</beans>
