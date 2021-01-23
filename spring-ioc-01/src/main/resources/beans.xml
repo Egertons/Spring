@@ -3,15 +3,26 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="mybatis" class="com.zhanglin.dao.MyBatis"></bean>
-    <bean id="sql" class="com.zhanglin.dao.SQLServer"></bean>
-    <bean id="userServer" class="com.zhanglin.server.UserServer">
+    <!--
+        id : bean的唯一标识符。也就是相当于对象名。
+        class : bean对象所对应的全限定名。(包名+类型)
+        name : 也是别名。（可以直接在这里配置别名）而且name可以同时取多个别名，更加高级高效
+                alias取别名只能同时取”一个“。
+    -->
+    <bean id="sql" class="com.zhanglin.dao.SQLServer" name="SQLServer,sqlServer"></bean>
+    <bean id="userServer" class="com.zhanglin.server.UserServer" name="us userserver;ss"><!-- 中间无论是空格还是”，”或者“;”都可以 -->
+        <!-- 有参构造属性赋值的三种方式 -->
         <!-- 第一种通过有参构造用XML配置对象 -->
 <!--        <constructor-arg index="0" ref="sql"/>-->
         <!-- 第二种方式通过type来配置对象（不推荐） -->
 <!--        <constructor-arg type="com.zhanglin.dao.UserDao" ref="sql"/>-->
         <!-- 第三种方式：直接通过参数名配置 -->
-        <constructor-arg name="userDao" ref="sql"/>
-        <!-- 标准通过set注入方式 -->
+<!--        <constructor-arg name="userDao" ref="sql"/>-->
+
+
+        <!-- 标准通过set注入方式(空参构造＋默认set方式) -->
 <!--        <property name="userDao" ref="sql"/>-->
     </bean>
+    <alias name="sql" alias="sqlServer"/>
+    <import resource="ii.xml"/>
 </beans>

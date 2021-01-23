@@ -1,0 +1,21 @@
+总结：
+    再配置文件加载的时候，容器中的对象就已经被初始化了。
+        而且！在后续调用这些Bean的时候，无论调用多少次，他们都指向同一个对象。
+
+
+5、Spring配置
+    5.1、别名
+        在XML配置文件当中，可以对bean对象起别名，在后续调用的时候无论用初始配置还是别名都可以。
+        Eg:
+            <bean id="sql" class="com.zhanglin.dao.SQLServer"></bean>
+            <alias name="sql" alias="sqlServer"/>
+    5.2、Bean的配置
+        id : bean的唯一标识符。也就是相当于对象名。
+                class : bean对象所对应的全限定名。(包名+类型)
+                name : 也是别名。（可以直接在这里配置别名）而且name可以同时取多个别名，更加高级高效
+                        alias取别名只能同时取”一个“。
+    5.3、import
+        import，一般用于团队开发使用，它可以将多个配置文件，导入合并为一个。
+        一般在后续使用中统一使用一个总文件，在总文件中来import各个子文件。
+        格式(Eg)：
+            <import resource="ii.xml"/>

@@ -1,0 +1,7 @@
+依赖注入（DI）
+    三种方式：构造器注入、set方式注入【重点 最常用】、拓展方式注入。
+        p命名空间注入
+            需要注意的是使用前需要在xml文件进行相关的配置
+                Eg：
+                    xmlns:p="http://www.springframework.org/schema/p"
+        c命名空间注入
