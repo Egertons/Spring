@@ -6,10 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-bean_automatic_assembly" />
         <module name="spring-ioc-01" />
         <module name="spring-bean_Scope" />
         <module name="spring-DI-01" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-bean_自动装配" target="14" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -12,6 +12,7 @@
         <module>spring-ioc-01</module>
         <module>spring-DI-01</module>
         <module>spring-bean_Scope</module>
+        <module>spring-bean_automatic_assembly</module>
     </modules>
 
     <dependencies>
