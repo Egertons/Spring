@@ -13,6 +13,7 @@
         <module>spring-DI-01</module>
         <module>spring-bean_Scope</module>
         <module>spring-bean_automatic_assembly</module>
+        <module>spring-annotation-01</module>
     </modules>
 
     <dependencies>
