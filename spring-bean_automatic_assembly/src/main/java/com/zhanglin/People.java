@@ -1,7 +1,17 @@
 package com.zhanglin;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.Nullable;
+
 public class People {
+    @Autowired(required = false)
     private Dog dog;
+
+    public People(@Nullable Cat cat) {
+        this.cat = cat;
+    }
+
+    @Autowired
     private Cat cat;
     private String name;
 
