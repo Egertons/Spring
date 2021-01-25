@@ -1,4 +1,43 @@
 使用注解开发
+
+    在Spring4之后，要使用注解进行开发，必须要保证aop的包已经导入了。
+    使用注解需要导入context约束，增加对注解的支持。
+
+    --使用注解装配bean的时候由于没有设置id，Spring自动设置的id为类名的全小写。
+
     1.bean
+        @Component -- 自动装配bean(组件),在类名上用。
+
     2.属性如何注入
+        @Value("zhanglin") -- 属性自动注入,在属性上用,也可以在set方法上用。
+            需要注意的是，简单的属性注入(DI)可以使用注解完成
+            但是复杂的DI注入还是更推荐使用xml文件(更清晰 更快速)
+
     3.衍生的注解
+        @Component用于配置普通的bean
+            在Spring MVC中有几个衍生的注解，用以匹配mvc三层架构分层。
+            dao【@Repository】
+            service【@Service】
+            controller【@Controller】
+        这四个注解的功能是一致的，都是代表将某个类注册到Spring中，装配Bean！
+    4.自动装配
+        @Autowired等(参照自动装配模块的笔记)
+            @Qualifier
+            @Nullable
+            @Resource
+
+    5.作用域
+        @Scope("填入相应的作用域")
+            singleton(单例)
+            prototype(原型)等
+
+    6.小结
+        xml更加万能，适用于任何场景！维护简单方便。
+        注解 不是自己的类使用不了。有一定的局限性。维护相对复杂
+
+        最佳搭配：
+            xml用来管理bean；
+            注解只负责完成属性的注入。
+
+        注意：
+            注解的使用要注意前期写上相关的依赖，并写明扫描指定包！！(否则不生效)
