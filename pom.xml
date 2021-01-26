@@ -15,6 +15,7 @@
         <module>spring-bean_automatic_assembly</module>
         <module>spring-annotation-01</module>
         <module>spring-appconfig</module>
+        <module>spring-08-proxy</module>
     </modules>
 
     <dependencies>

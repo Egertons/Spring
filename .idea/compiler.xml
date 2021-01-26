@@ -8,10 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-bean_automatic_assembly" />
         <module name="spring-appconfig" />
-        <module name="spring-ioc-01" />
-        <module name="spring-bean_Scope" />
         <module name="spring-annotation-01" />
         <module name="spring-DI-01" />
+        <module name="spring-ioc-01" />
+        <module name="spring-bean_Scope" />
+        <module name="spring-08-proxy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
