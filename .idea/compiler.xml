@@ -9,6 +9,7 @@
         <module name="spring-bean_automatic_assembly" />
         <module name="spring-appconfig" />
         <module name="spring-annotation-01" />
+        <module name="spring-10-mybatis" />
         <module name="spring-DI-01" />
         <module name="spring-09-aop" />
         <module name="spring-ioc-01" />
