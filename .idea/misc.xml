@@ -9,6 +9,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/spring-10-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/spring-bean_自动装配/pom.xml" />
       </set>
     </option>

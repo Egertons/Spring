@@ -9,15 +9,16 @@
         <module name="spring-bean_automatic_assembly" />
         <module name="spring-appconfig" />
         <module name="spring-annotation-01" />
-        <module name="spring-10-mybatis" />
         <module name="spring-DI-01" />
         <module name="spring-09-aop" />
         <module name="spring-ioc-01" />
         <module name="spring-bean_Scope" />
+        <module name="spring-mybatis" />
         <module name="spring-08-proxy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="spring-10-mybatis" target="1.5" />
       <module name="spring-bean_自动装配" target="14" />
     </bytecodeTargetLevel>
   </component>
