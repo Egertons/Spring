@@ -39,4 +39,14 @@ public class MyTest {
         }
     }
 
+    @Test
+    public void UserMapperImpl2(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("springDao.xml");
+        UserMapperImpl2 mapperImpl2 = context.getBean("UserMapperImpl2", UserMapperImpl2.class);
+        List<User> allUser = mapperImpl2.getAllUser();
+        for (User user : allUser) {
+            System.out.println(user.toString());
+        }
+    }
+
 }
