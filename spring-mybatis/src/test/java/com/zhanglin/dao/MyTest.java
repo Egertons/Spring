@@ -21,7 +21,6 @@ public class MyTest {
         InputStream in = Resources.getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(in);
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
-        System.out.println("===============");
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         List<User> allUser = mapper.getAllUser();
         for (User user : allUser) {

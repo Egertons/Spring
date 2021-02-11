@@ -9,3 +9,15 @@ Spring整合Mybatis
                 <constructor-arg index="0" value="sqlSessionFactory"/>
             </bean>
         需要给接口加实现类（注册到Spring）
+
+
+
+事务的ACID原则：
+    原子性
+    一致性
+    隔离性
+        多个业务可能操纵同一个资源，防止业务损坏！
+    持久性
+        事务一旦提交，无论系统发生什么问题，数据都会持久化到数据库中。
+
+声明式事务：

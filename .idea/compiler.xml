@@ -14,6 +14,7 @@
         <module name="spring-09-aop" />
         <module name="spring-ioc-01" />
         <module name="spring-bean_Scope" />
+        <module name="spring-11-transaction" />
         <module name="spring-mybatis" />
         <module name="spring-08-proxy" />
       </profile>
