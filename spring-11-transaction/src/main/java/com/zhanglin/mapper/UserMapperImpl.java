@@ -1,20 +1,13 @@
 package com.zhanglin.mapper;
 
 import com.zhanglin.pojo.User;
-import org.mybatis.spring.SqlSessionTemplate;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
 
 import java.util.List;
 
-public class UserMapperImpl implements UserMapper{
-
-    private SqlSessionTemplate sqlSessionTemplate;
-
-    public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
-        this.sqlSessionTemplate = sqlSessionTemplate;
-    }
-
+public class UserMapperImpl extends SqlSessionDaoSupport implements UserMapper {
     @Override
     public List<User> getAllUser() {
-        return sqlSessionTemplate.getMapper(UserMapper.class).getAllUser();
+        return getSqlSession().getMapper(UserMapper.class).getAllUser();
     }
 }

@@ -4,10 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="userMapperImpl" class="com.zhanglin.mapper.UserMapperImpl">
-        <property name="sqlSessionTemplate" ref="sqlsession"/>
+        <property name="sqlSessionFactory" ref="SqlSessionFactory"/>
     </bean>
-    <bean id="userdemo" class="com.zhanglin.mapper.UserMapperr">
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
-    </bean>
-    <import resource="SpringMapper.xml"/>
+    <import resource="SpringDao.xml"/>
 </beans>
