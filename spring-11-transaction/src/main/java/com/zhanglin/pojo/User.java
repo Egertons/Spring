@@ -1,10 +1,10 @@
 package com.zhanglin.pojo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.stereotype.Component;
 
 @Data
-//@Component
+@AllArgsConstructor
 public class User {
     private int id;
     private String name;

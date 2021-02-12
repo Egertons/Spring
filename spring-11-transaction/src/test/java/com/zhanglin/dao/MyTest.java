@@ -18,4 +18,14 @@ public class MyTest {
             System.out.println(user.toString());
         }
     }
+
+    @Test
+    public void b(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("SpringBean.xml");
+        UserMapperImpl impl = context.getBean("userMapperImpl", UserMapperImpl.class);
+        int i = impl.addUser(new User(9, "ui", "ui"));
+        if (i>0){
+            System.out.println("添加成功，i为："+i);
+        }
+    }
 }
