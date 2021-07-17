@@ -20,7 +20,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-10-mybatis" target="1.5" />
+      <module name="spring-10-mybatis" target="14" />
       <module name="spring-bean_自动装配" target="14" />
     </bytecodeTargetLevel>
   </component>
